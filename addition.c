@@ -6,13 +6,13 @@ int main()
 	int num1 = 0;
 	int num2 = 0;
 
-	//ÊäÈë2¸öÕûÊı
+	//è¾“å…¥2ä¸ªæ•´æ•°
 	scanf("%d %d", &num1, &num2);
 	
-	//ÇóºÍ
+	//æ±‚å’Œ
 	int sum = num1 + num2;
 
-	//Êä³ö
+	//è¾“å‡º
 	printf("%d\n", sum);
 
 	return 0;
