@@ -1,10 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 
-//¶¨ÒåÒ»¸öÑ§Éú½á¹¹Ìå
+//å®šä¹‰ä¸€ä¸ªå­¦ç”Ÿç»“æ„ä½“
 struct Stu
 {
-	//³ÉÔ±
+	//æˆå‘˜
 	char name[20];
 	int age;
 	char sex[10];
@@ -14,16 +14,16 @@ void print(struct Stu* ps)
 {
 	printf("%s %d %s %s\n", (*ps).name, (*ps).age, (*ps).sex, (*ps).tele);
 	//- >
-	//½á¹¹ÌåÖ¸Õë±äÁ¿->³ÉÔ±Ãû
+	//ç»“æ„ä½“æŒ‡é’ˆå˜é‡->æˆå‘˜å
 	printf("%s %d %s %s\n", ps->name, ps->age, ps->sex, ps->tele);
 };
 int main()
 {
-	struct Stu s = { "ÕÅÈı", 20, "ÄĞ", "13326554335" };
-	//·ÃÎÊ½á¹¹Ìå¶ÔÏó£º
-	// 1.½á¹¹Ìå¶ÔÏó.³ÉÔ±Ãû
+	struct Stu s = { "å¼ ä¸‰", 20, "ç”·", "13326554335" };
+	//è®¿é—®ç»“æ„ä½“å¯¹è±¡ï¼š
+	// 1.ç»“æ„ä½“å¯¹è±¡.æˆå‘˜å
 	printf("%s %d %s %s\n", s.name, s.age, s.sex, s.tele);
-	//2.¶¨Òåº¯Êı£¬ÔËÓÃ½á¹¹ÌåÖ¸Õë±äÁ¿
+	//2.å®šä¹‰å‡½æ•°ï¼Œè¿ç”¨ç»“æ„ä½“æŒ‡é’ˆå˜é‡
 	print(&s);
 	return 0;
 }
