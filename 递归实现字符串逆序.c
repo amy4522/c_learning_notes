@@ -1,12 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS
-//�ݹ�ʵ���ַ�������,������ʹ�ÿ⺯�����ַ�������
-// �ַ������ݷ����˱仯�����������ӡ
+//递归实现字符串逆序,不允许使用库函数求字符串长度
+// 字符串内容发生了变化，不是逆序打印
 
 # include<stdio.h>
 
 //void reverse(char arr[])
 //{
-//	//�ǵݹ�
+//	//非递归
 //	/*int left = 0;
 //	int right = strlen(arr) - 1;
 //	while (left < right)
@@ -20,7 +20,7 @@
 //	}*/
 //}
 
-//���ַ�������
+//求字符串长度
 int my_strlen(char* str)
 {
 	int count = 0;
@@ -32,7 +32,7 @@ int my_strlen(char* str)
 	return count;
 }
 
-//�ݹ�ʵ��,ָ������ʽ������һ��ָ������
+//递归实现,指定了形式参数是一个指针的情况
 //void reverse(char* str)
 //{
 //	char tmp = *str;//1
@@ -44,14 +44,26 @@ int my_strlen(char* str)
 //	*(str + len - 1) = tmp;//5
 //}
 
-//�ݹ�ʵ�֣������Լ�������ʽ���������
+//递归实现，可以自己定义形式参数的情况
+//void reverse(char arr[], int left, int right)
+//{
+//	char tmp = arr[left];
+//	arr[left] = arr[right];
+//	arr[right] = tmp;
+//	if (left < right)
+//		reverse(arr, left + 1, right - 1);
+//}//出现了一个bug，偶数个字符cd交换了2次
+
+//修改版
 void reverse(char arr[], int left, int right)
 {
-	char tmp = arr[left];
-	arr[left] = arr[right];
-	arr[right] = tmp;
 	if (left < right)
+	{
+		char tmp = arr[left];
+		arr[left] = arr[right];
+		arr[right] = tmp;
 		reverse(arr, left + 1, right - 1);
+	}
 }
 
 int main()
