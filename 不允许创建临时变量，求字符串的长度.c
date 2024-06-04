@@ -15,6 +15,20 @@
 //	return count;
 //}
 
+//指针-指针
+//int my_strlen(char* str)
+//{
+//	int count = 0;//用来计数的临时变量
+//	int* start = str;
+// 
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return str - start;
+//}
+
 //递归求解
 //my_strlen("abc")
 //1 + my_strlen("bc")
