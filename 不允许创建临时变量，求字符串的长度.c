@@ -3,6 +3,7 @@
 //Ä£ÄâÊµÏÖstrlen
 
 # include <stdio.h>
+# include<assert.h>
 
 //int my_strlen(char* str)
 //{
@@ -36,8 +37,9 @@
 //1 + 1 + 1 +my_strlen("")
 //1 + 1 + 1 + 0
 
-int my_strlen(char* str)
+int my_strlen(const char* str)
 {
+	assert(str);
 	if (*str != '\0')
 		return 1 + my_strlen(str + 1);
 	else
